@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import Book from '../Book/Book';
 
-const Books = () => {
+const Books = ({data}) => {
     const  [allBooks, setallBooks]=useState([]);
 
     // useEffect(()=>{
@@ -12,13 +12,15 @@ const Books = () => {
     //     })
     // }, [])
 
-    const bookPromise=fetch('./booksData.json').then(res=>res.json())
+    // const bookPromise=fetch('./booksData.json').then(res=>res.json())
     
     return (
         <div>
             <h1 className='text-3xl text-center p-6'>Books</h1>
             <Suspense fallback={<span>Loading.....</span>}>
-            <Book></Book>
+                {
+                    data.map((singleBook)=><Book key={singleBook.bookId} singleBook={singleBook}></Book>)
+                }
             </Suspense>
         </div>
     );
