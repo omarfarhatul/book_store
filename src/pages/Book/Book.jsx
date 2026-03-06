@@ -7,12 +7,12 @@ const Book = ({ singleBook }) => {
     const { bookName, author, image }=singleBook;
 
     return (
-        <div className="card bg-base-300 w-96 md:w-90 shadow-sm mx-auto mb-10 border">
-            <figure className="p-5">
+        <div className="card bg-base-300 w-96 md:w-90 shadow-sm mx-auto mb-10 border p-5">
+            <figure className="p-5 border bg-gray-800 rounded-xl">
                 <img
                     src={image}
                     alt="Shoes"
-                    className="rounded-xl"/>
+                    className="h-42 rounded-xl"/>
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Card Title</h2>
