@@ -1,10 +1,11 @@
 import React, { use } from 'react';
+import { FaRegStarHalfStroke } from "react-icons/fa6";
 
 const Book = ({ singleBook }) => {
     // const data=use(bookPromise);
     // console.log(data);
 
-    const { bookName, author, image }=singleBook;
+    const { bookName, author, image, rating, category }=singleBook;
 
     return (
         <div className="card bg-base-300 w-96 md:w-90 shadow-sm mx-auto mb-10 border p-5">
@@ -15,10 +16,14 @@ const Book = ({ singleBook }) => {
                     className="h-42 rounded-xl"/>
             </figure>
             <div className="card-body items-center text-center">
-                <h2 className="card-title">Card Title</h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div className="card-actions">
-                    <button className="btn btn-primary">Buy Now</button>
+                <h2 className="card-title">
+                    {bookName}
+                    </h2>
+                <div className='badge badge-secondary'>{author}</div>
+                <p>Young Scout witnesses racial injustice in the American South as her father defends falsely accused Black man</p>
+                <div className="flex gap-26">
+                    <button className="btn btn-primary">{category}</button>
+                    <div className='badge badge-outline my-auto p-3'>{rating} <FaRegStarHalfStroke /></div>
                 </div>
             </div>
         </div>
