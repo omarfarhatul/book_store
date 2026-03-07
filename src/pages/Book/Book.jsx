@@ -5,7 +5,8 @@ const Book = ({ singleBook }) => {
     // const data=use(bookPromise);
     // console.log(data);
 
-    const { bookName, author, image, rating, category }=singleBook;
+    const { bookName, author, image, rating, category, tags, 
+    yearOfPublishing }=singleBook;
 
     return (
         <div className="card bg-base-300 w-96 md:w-90 shadow-sm mx-auto mb-10 border p-5">
@@ -16,10 +17,18 @@ const Book = ({ singleBook }) => {
                     className="h-42 rounded-xl"/>
             </figure>
             <div className="card-body items-center text-center">
+                    <div className='flex gap-10'>
+                        {
+                            tags.map(tag=><button>{tag}</button>)
+                        }
+                    </div>
                 <h2 className="card-title">
                     {bookName}
                     </h2>
-                <div className='badge badge-secondary'>{author}</div>
+                <div className='flex gap-10'>
+                    <div className='badge badge-secondary'>{author}</div>
+                    <div className='badge badge-secondary'>{yearOfPublishing}</div>
+                </div>
                 <p>Young Scout witnesses racial injustice in the American South as her father defends falsely accused Black man</p>
                 <div className="flex gap-26">
                     <button className="btn btn-primary">{category}</button>
