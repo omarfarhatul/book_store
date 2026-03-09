@@ -1,15 +1,17 @@
 import React, { use } from 'react';
 import { FaRegStarHalfStroke } from "react-icons/fa6";
+import { Link } from 'react-router';
 
 const Book = ({ singleBook }) => {
     // const data=use(bookPromise);
     // console.log(data);
 
     const { bookName, author, image, rating, category, tags, 
-    yearOfPublishing }=singleBook;
+    yearOfPublishing, bookId }=singleBook;
 
     return (
-        <div className="card bg-base-300 w-96 md:w-90 shadow-sm mx-auto mb-10 border p-5">
+        <Link to={`/bookDetails/${bookId}`}>
+            <div className="card bg-base-300 w-96 md:w-90 shadow-sm mx-auto mb-10 border p-5">
             <figure className="p-5 border bg-gray-800 rounded-xl">
                 <img
                     src={image}
@@ -29,13 +31,14 @@ const Book = ({ singleBook }) => {
                     <div className='badge badge-secondary'>{author}</div>
                     <div className='badge badge-secondary'>{yearOfPublishing}</div>
                 </div>
-                <p className='border-t-1 border-dashed'>Young Scout witnesses racial injustice in the American South as her father defends falsely accused Black man</p>
-                <div className="flex gap-25">
+                <p>Young Scout witnesses racial injustice in the American South as her father defends falsely accused Black man</p>
+                <div className="flex gap-25 border-t-1 border-dashed pt-2">
                     <button className="btn btn-primary">{category}</button>
                     <div className='badge badge-outline my-auto p-3'>{rating} <FaRegStarHalfStroke /></div>
                 </div>
             </div>
         </div>
+        </Link>
     );
 };
 
