@@ -29,7 +29,7 @@ const Book = ({ singleBook }) => {
                     <div className='badge badge-secondary'>{author}</div>
                     <div className='badge badge-secondary'>{yearOfPublishing}</div>
                 </div>
-                <p>Young Scout witnesses racial injustice in the American South as her father defends falsely accused Black man</p>
+                <p className='border-t-1 border-dashed'>Young Scout witnesses racial injustice in the American South as her father defends falsely accused Black man</p>
                 <div className="flex gap-25">
                     <button className="btn btn-primary">{category}</button>
                     <div className='badge badge-outline my-auto p-3'>{rating} <FaRegStarHalfStroke /></div>
