@@ -18,6 +18,7 @@ const Book = ({ singleBook }) => {
                     alt="Shoes"
                     className="h-42 rounded-xl"/>
             </figure>
+            
             <div className="card-body items-center text-center">
                     <div className='flex gap-10'>
                         {
