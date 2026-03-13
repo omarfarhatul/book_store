@@ -15,7 +15,7 @@ const ReadList = () => {
                     <h2>I read Book</h2>
                 </TabPanel>
                 <TabPanel>
-                    <h2>My Wish List</h2>
+                    <h2>My Wishlist</h2>
                 </TabPanel>
             </Tabs>
         </div>
