@@ -18,7 +18,7 @@ const BookDetails = () => {
 
     return (
         <div className='border-2 w-2/5 mx-auto text-center py-5'>
-            <img className='w-40 mx-auto' src={image} alt="" />
+            <img className='w-40 mx-auto' src={image} alt="book_image" />
             <h5>{bookName}</h5>
 
             <button onClick={()=>handleMarkAsRead(id)} className="btn btn-active btn-accent mx-1">Mark as Read</button>
