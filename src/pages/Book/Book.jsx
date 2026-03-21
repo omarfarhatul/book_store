@@ -25,6 +25,7 @@ const Book = ({ singleBook }) => {
                             tags.map(tag=><button>{tag}</button>)
                         }
                     </div>
+                    
                 <h2 className="card-title">
                     {bookName}
                     </h2>
