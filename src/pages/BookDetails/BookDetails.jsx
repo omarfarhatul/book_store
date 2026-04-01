@@ -11,7 +11,10 @@ const BookDetails = () => {
 
     const handleMarkAsRead=id=>{
         //  Store with Id
-        // where to storedJ
+        // where to storedJ0
+        // array or collection
+        // if book already exist the show a alart
+        // if book not exist then puush in the collection or array
 
         addToStoredDB(id);
     }
